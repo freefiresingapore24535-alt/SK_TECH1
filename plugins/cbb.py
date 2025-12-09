@@ -60,23 +60,33 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         )
    
     elif data == "paidusers":
-        await query.message.delete()
-        await client.send_photo(
-            chat_id=query.message.chat.id,
-            photo=QR_PIC,
-            text=f"👋 {query.from_user.username}\n\n🎖️ Available Plans :\n\n● {PRICE1} rs For 7 Days Prime Membership\n\n● {PRICE2} rs For 1 Month Prime Membership\n\n● {PRICE3} rs For 3 Months Prime Membership\n\n● {PRICE4} rs For 6 Months Prime Membership\n\n● {PRICE5} rs For 1 Year Prime Membership\n\n\n💵 UPI ID -  <code>{UPI_ID}</code>\n\n\n📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n♻️ If payment is not getting sent on above given QR code then inform admin, he will give you new QR code\n\n\n‼️ Must Send Screenshot after payment"
-            ),
-            reply_markup=InlineKeyboardMarkup(
+    await query.message.delete()
+    await query.message.reply(
+        text=(
+            f"👋 {query.from_user.username}\n\n"
+            f"🎖️ Available Plans :\n\n"
+            f"● {PRICE1} rs For 7 Days Prime Membership\n"
+            f"● {PRICE2} rs For 1 Month Prime Membership\n"
+            f"● {PRICE3} rs For 3 Months Prime Membership\n"
+            f"● {PRICE4} rs For 6 Months Prime Membership\n"
+            f"● {PRICE5} rs For 1 Year Prime Membership\n\n"
+            f"💵 UPI ID - <code>{UPI_ID}</code>\n\n"
+            f"📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n"
+            "♻️ If payment is not getting sent to the QR above, inform admin for a new one.\n\n"
+            "‼️ Must send screenshot after payment."
+        ),
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
                 [
-                    [
-                        InlineKeyboardButton(
-                            "ADMIN 24/7", url=(SCREENSHOT_URL)
-                        )
-                    ],
-                    [InlineKeyboardButton("🔒 Close", callback_data="close")],
+                    InlineKeyboardButton("Send Payment Screenshot (ADMIN) 📸", url=SCREENSHOT_URL)
+                ],
+                [
+                    InlineKeyboardButton("🔒 Close", callback_data="close")
                 ]
-            )
+            ]
         )
+    )
 
 
 
