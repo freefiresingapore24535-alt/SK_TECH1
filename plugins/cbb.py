@@ -22,7 +22,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-            [InlineKeyboardButton("• ʜᴏᴍᴇ •", callback_data="trail"), 
+            [InlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data="trail"), 
              InlineKeyboardButton("• ᴄʟᴏsᴇ •", callback_data='close')
             ], [InlineKeyboardButton("• ᴅᴇᴠᴇʟᴏᴘᴇʀ •", url="https://t.me/Minato_Sencie")
                ]
