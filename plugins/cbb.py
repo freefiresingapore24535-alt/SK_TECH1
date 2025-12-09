@@ -71,23 +71,28 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             f"● {PRICE4} rs For 6 Months Prime Membership\n"
             f"● {PRICE5} rs For 1 Year Prime Membership\n\n"
             f"💵 UPI ID - <code>{UPI_ID}</code>\n\n"
-            f"📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n"
-            "♻️ If payment is not getting sent to the QR above, inform admin for a new one.\n\n"
-            "‼️ Must send screenshot after payment."
+            f"📸 QR - Click here to scan: {UPI_IMAGE_URL}\n\n"
+            "♻️ If payment doesn't go through on the QR above, contact admin for a new QR.\n\n"
+            "‼️ Must send a screenshot after payment."
         ),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Send Payment Screenshot (ADMIN) 📸", url=SCREENSHOT_URL)
+                    InlineKeyboardButton(
+                        "Send Payment Screenshot (ADMIN) 📸",
+                        url=SCREENSHOT_URL
+                    )
                 ],
                 [
-                    InlineKeyboardButton("🔒 Close", callback_data="close")
+                    InlineKeyboardButton(
+                        "🔒 Close",
+                        callback_data="close"
+                    )
                 ]
             ]
         )
     )
-
 
 
     elif data == "close":
