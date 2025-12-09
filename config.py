@@ -26,6 +26,7 @@ API_HASH = os.environ.get("API_HASH", "7992b5c5c9c6d34276c3dce9e46ba879") #Your 
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1003494765620")) #Your db channel Id
 OWNER = os.environ.get("OWNER", "Minato_Sencie") # Owner username without @
 OWNER_ID = int(os.environ.get("OWNER_ID", "5960133511")) # Owner id
+ADMINS = [5960133511] # Admin IDs
 #--------------------------------------------
 PORT = os.environ.get("PORT", "8080")
 #--------------------------------------------
@@ -43,7 +44,7 @@ FORCE_PIC = os.environ.get("FORCE_PIC", "https://files.catbox.moe/dpk0pi.jpg")
 # Enable or Disable Verify Mode
 VERIFY_MODE = os.environ.get("VERIFY_MODE", "True").lower() == "true"
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "vplink.in")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "5fc87479ac0c4c2d2ed0510089fe5493073800d6")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "8a97662a9011593aca4eba9e00a5b93b5267b21c")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 64800)) # Add time in seconds
 TUT_VID = os.environ.get("TUT_VID","https://t.me/HTODLINKZ/2")
 
@@ -70,7 +71,7 @@ ABOUT_TXT = "<b>›› ғᴏʀ ᴍᴏʀᴇ: <a href='https://t.me/+AdcXPREPNEpkZ
 #--------------------------------------------
 #--------------------------------------------
 START_MSG = os.environ.get("START_MESSAGE", "<b>›› ʜᴇʏ!!, {mention} ~ <blockquote>ɪ ᴀᴍ ᴍᴀᴅᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ғɪɴᴅ ᴡʜᴀᴛ ʏᴏᴜ aʀᴇ ʟᴏᴏᴋɪɴɢ ꜰᴏʀ.</blockquote></b>")
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "ʜᴇʟʟᴏ {mention}\n\n<b><blockquote>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ʀᴇʟᴏᴀᴅ button ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b></blockquote>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b><blockquote>›› ʜᴇʏ × {mention}</blockquote>\n  ʏᴏᴜʀ ғɪʟᴇ ɪs ʀᴇᴀᴅʏ ‼️ ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴜʙsᴄʀɪʙᴇᴅ ᴛᴏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ʏᴇᴛ, sᴜʙsᴄʀɪʙᴇ ɴᴏᴡ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs</b>")
 CMD_TXT = """<blockquote><b>›› ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ:</b></blockquote>
 
 <blockquote><b>🚀 ɢᴇɴᴇʀᴀʟ</b></blockquote>
@@ -136,7 +137,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", "True") == 'True'
 #--------------------------------------------
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!"
+USER_REPLY_TEXT = "<b>For More Join - <a href='https://t.me/+AdcXPREPNEpkZmNl'>Cʟɪᴄᴋ ʜᴇʀᴇ</a> </b>"
 
 #==========================(BUY PREMIUM)====================#
 
