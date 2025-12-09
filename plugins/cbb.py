@@ -59,22 +59,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
         )
    
-    elif data == "premium":
+    elif data == "paidusers":
         await query.message.delete()
         await client.send_photo(
             chat_id=query.message.chat.id,
             photo=QR_PIC,
-            caption=(
-                f"👋 {query.from_user.username}\n\n"
-                f"🎖️ Available Plans :\n\n"
-                f"● {PRICE1}  For 3 Days Prime Membership\n\n"
-                f"● {PRICE2}  For 7 Days Prime Membership\n\n"
-                f"● {PRICE3}  For 1 Months Prime Membership\n\n"
-                f"● {PRICE4}  For 2 Months Prime Membership\n\n"
-                f"● {PRICE5}  For 3 Months Prime Membership\n\n\n"
-                f"💵 ASK UPI ID TO ADMIN AND PAY THERE -  <code>{UPI_ID}</code>\n\n\n"
-                f"♻️ After Payment You Will Get Instant Membership \n\n\n"
-                f"‼️ Must Send Screenshot after payment & If anyone want custom time membrship then ask admin"
+            text=f"👋 {query.from_user.username}\n\n🎖️ Available Plans :\n\n● {PRICE1} rs For 7 Days Prime Membership\n\n● {PRICE2} rs For 1 Month Prime Membership\n\n● {PRICE3} rs For 3 Months Prime Membership\n\n● {PRICE4} rs For 6 Months Prime Membership\n\n● {PRICE5} rs For 1 Year Prime Membership\n\n\n💵 UPI ID -  <code>{UPI_ID}</code>\n\n\n📸 QR - ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ꜱᴄᴀɴ ({UPI_IMAGE_URL})\n\n♻️ If payment is not getting sent on above given QR code then inform admin, he will give you new QR code\n\n\n‼️ Must Send Screenshot after payment"
             ),
             reply_markup=InlineKeyboardMarkup(
                 [
